@@ -36,3 +36,362 @@
     transform: rotate(360deg);
   }
 }
+
+/* Senaryo Tespit CSS */
+
+.simulation-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.5rem;
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  color: #d32f2f; /* Redventure kırmızısı */
+}
+
+/* Kontrol paneli */
+.controls {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1rem;
+  margin-bottom: 2rem;
+  background-color: #f8f9fa;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border-left: 4px solid #2196F3;
+}
+
+@media (min-width: 640px) {
+  .controls {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 768px) {
+  .controls {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.control-item {
+  margin-bottom: 0.5rem;
+}
+
+.control-item label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #4a5568;
+  margin-bottom: 0.5rem;
+}
+
+.control-item input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.375rem;
+  background-color: white;
+  font-size: 0.875rem;
+  transition: border-color 0.2s;
+}
+
+.control-item input:focus {
+  outline: none;
+  border-color: #2196F3;
+  box-shadow: 0 0 0 3px rgba(33, 150, 243, 0.2);
+}
+
+/* Grafik konteyneri */
+.chart-container {
+  margin-bottom: 2rem;
+  background-color: white;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+}
+
+.chart-container h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #2c3e50;
+}
+
+/* Analiz bölümü */
+.analysis-container {
+  background-color: #f0f9ff;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  margin-bottom: 2rem;
+  border-left: 4px solid #3b82f6;
+}
+
+.analysis-container h3 {
+  font-weight: 700;
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
+  color: #1e40af;
+}
+
+.analysis-section {
+  background-color: white;
+  padding: 1.25rem;
+  margin-bottom: 1.5rem;
+  border-radius: 0.375rem;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+}
+
+.analysis-section h4 {
+  font-weight: 600;
+  font-size: 1.125rem;
+  margin-bottom: 1rem;
+  color: #3b82f6;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+/* Senaryo eşleşme sonucu */
+.scenario-match {
+  background-color: #f0f9ff;
+  border-radius: 0.375rem;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.match-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.match-title {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #1e40af;
+  margin: 0;
+}
+
+.match-score {
+  background-color: #3b82f6;
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 1rem;
+  font-weight: 600;
+  font-size: 0.875rem;
+}
+
+.match-details {
+  margin-bottom: 1rem;
+}
+
+.match-criteria {
+  margin-top: 1rem;
+}
+
+.match-criteria h6 {
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  color: #4b5563;
+}
+
+/* İlerleme çubuğu */
+.criteria-progress {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.criterion {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.criterion span {
+  font-size: 0.875rem;
+  min-width: 150px;
+}
+
+.criterion span:last-child {
+  min-width: auto;
+  width: 40px;
+  text-align: right;
+}
+
+.progress-bar {
+  height: 0.5rem;
+  background-color: #e5e7eb;
+  border-radius: 0.25rem;
+  overflow: hidden;
+  flex-grow: 1;
+}
+
+.progress-value {
+  height: 100%;
+  background-color: #3b82f6;
+  border-radius: 0.25rem;
+}
+
+/* Tablo */
+.comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #e5e7eb;
+  margin-bottom: 1rem;
+}
+
+.comparison-table th,
+.comparison-table td {
+  padding: 0.75rem;
+  text-align: left;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.comparison-table th {
+  background-color: #f8fafc;
+  font-weight: 600;
+  color: #1e40af;
+}
+
+.comparison-table tr:hover {
+  background-color: #f1f5f9;
+}
+
+.comparison-table tr.best-match {
+  background-color: #dbeafe;
+}
+
+.comparison-table tr.simulation-results {
+  background-color: #f0f9ff;
+  font-weight: 500;
+}
+
+/* Finansal projeksiyon */
+.financial-projection {
+  margin-top: 1rem;
+}
+
+.projection-row {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 640px) {
+  .projection-row {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.projection-item {
+  background-color: #f0f9ff;
+  padding: 1rem;
+  border-radius: 0.375rem;
+  text-align: center;
+}
+
+.projection-item h6 {
+  font-size: 0.875rem;
+  color: #4b5563;
+  margin-bottom: 0.5rem;
+  font-weight: 400;
+}
+
+.projection-value {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1e40af;
+  margin: 0;
+}
+
+.scenario-comparison {
+  background-color: #f1f5f9;
+  padding: 1rem;
+  border-radius: 0.375rem;
+  border-left: 3px solid #3b82f6;
+  margin-top: 1rem;
+}
+
+/* Senaryo açıklamaları */
+.info-container {
+  margin-bottom: 2rem;
+}
+
+.info-container h3 {
+  font-weight: 700;
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  color: #2c3e50;
+}
+
+.scenario-descriptions {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1rem;
+}
+
+@media (min-width: 640px) {
+  .scenario-descriptions {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .scenario-descriptions {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+.scenario-card {
+  padding: 1rem;
+  border-radius: 0.375rem;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+}
+
+.scenario-card h4 {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+
+.scenario-card p {
+  font-size: 0.875rem;
+  margin-bottom: 0.5rem;
+  line-height: 1.4;
+}
+
+.scenario-card.assertive {
+  background-color: #f0f9ff;
+  border-left: 3px solid #0284c7;
+}
+
+.scenario-card.realistic {
+  background-color: #f0fdfa;
+  border-left: 3px solid #0d9488;
+}
+
+.scenario-card.optional {
+  background-color: #fefce8;
+  border-left: 3px solid #ca8a04;
+}
+
+.scenario-card.conservative {
+  background-color: #eff6ff;
+  border-left: 3px solid #2563eb;
+}
+
+.scenario-card.minimum {
+  background-color: #faf5ff;
+  border-left: 3px solid #7e22ce;
+}
