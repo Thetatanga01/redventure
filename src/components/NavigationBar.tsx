@@ -23,12 +23,27 @@ const NavigationBar = () => {
 
   const handleDemoClick = () => {
     navigate('/demo');
+  };
+
+  const handleLogoClick = () => {
+    navigate('/');
   };    
+
   return (
     <AppBar position="static" sx={{ backgroundColor: '#E60000' }}>
       <Toolbar>
         <Box sx={{ flexGrow: 1, display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-          <Typography variant="h6" component="div">
+          <Typography 
+            variant="h6" 
+            component="div" 
+            onClick={handleLogoClick}
+            sx={{ 
+              cursor: 'pointer',
+              '&:hover': {
+                opacity: 0.8
+              }
+            }}
+          >
             RedVenture
           </Typography>
           <Box>
