@@ -49,7 +49,7 @@ const VideoPlayer = () => {
           autoPlay
           onLoadedData={handleVideoLoad}
         >
-          <source src="/asset/vodafone-wenovate-son.mp4" type="video/mp4" />
+          <source src="https://redventure.fra1.cdn.digitaloceanspaces.com/vodafone-wenovate-son.mp4" type="video/mp4" />
           Tarayıcınız video oynatmayı desteklemiyor.
         </video>
       </Box>
