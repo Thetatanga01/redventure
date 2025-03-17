@@ -25,6 +25,10 @@ const NavigationBar = () => {
     navigate('/demo');
   };
 
+  const handleWireframeClick = () => {
+    navigate('/wireframe');
+  };
+
   const handleLogoClick = () => {
     navigate('/');
   };    
@@ -49,6 +53,7 @@ const NavigationBar = () => {
           <Box>
             <Button color="inherit" onClick={handlePresentationClick}>Sunum</Button>
             <Button color="inherit" onClick={handleDemoClick}>Demo Video</Button>
+            <Button color="inherit" onClick={handleWireframeClick}>Wireframe</Button>
             <Button color="inherit" onClick={handleHomeClick}>Simülasyon</Button>
             <Button color="inherit" onClick={handleReferencesClick}>Referanslar</Button>
           </Box>

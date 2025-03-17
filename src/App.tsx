@@ -10,6 +10,7 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-d
 import References from './components/References';
 import VideoPlayer from './components/VideoPlayer';
 import Presentation from './components/Presentation';
+import Wireframe from './components/Wireframe';
 
 const App = () => {
   const [inputs, setInputs] = useState<SimulationInputs>({
@@ -39,6 +40,7 @@ const App = () => {
         <Route path="/references" element={<References />} />
         <Route path="/demo" element={<VideoPlayer />} />
         <Route path="/presentation" element={<Presentation />} />
+        <Route path="/wireframe" element={<Wireframe />} />
       </Routes>
     </Router>
   );
